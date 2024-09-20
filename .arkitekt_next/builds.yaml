@@ -1,0 +1,282 @@
+builds:
+- build_id: 5071fdb5-2e48-4fda-899c-b7b971f19c94
+  build_run: 882f21c2-30c6-4e08-9152-f68573eafe06
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+      datalayer:
+        description: An instance of ArkitektNext Datalayer to make requests to the
+          user's data
+        optional: true
+        service: live.arkitekt.s3
+      fluss:
+        description: An instance of ArkitektNext fluss to retrieve graphs from
+        optional: false
+        service: live.arkitekt.fluss
+      kabinet:
+        description: An instance of ArkitektNext Kabinet to retrieve nodes from
+        optional: false
+        service: live.arkitekt.kabinet
+      livekit:
+        description: An instance of ArkitektNext Lok to authenticate the user
+        optional: false
+        service: io.livekit.livekit
+      lok:
+        description: An instance of ArkitektNext Lok to authenticate the user
+        optional: false
+        service: live.arkitekt.lok
+      mikro:
+        description: An instance of ArkitektNext Mikro to make requests to the user's
+          data
+        optional: true
+        service: live.arkitekt.mikro
+      rekuest:
+        description: An instance of ArkitektNext Rekuest to assign to nodes
+        optional: false
+        service: live.arkitekt.rekuest
+      unlok:
+        description: An instance of ArkitektNext Lok to authenticate the user
+        optional: false
+        service: live.arkitekt.lok
+    size: 539753175
+    templates:
+    - definition:
+        args:
+        - default: 10
+          description: The number of iterations, by default 10
+          key: n
+          kind: INT
+          label: n
+          nullable: true
+          scope: GLOBAL
+        - default: 2
+          description: The timeout, by default 2
+          key: timeout
+          kind: INT
+          label: timeout
+          nullable: true
+          scope: GLOBAL
+        collections: []
+        description: This function generates {{n}} strings with a {{timeout}} ms timeout
+          between each string
+        interfaces: []
+        isDev: false
+        isTestFor: []
+        kind: GENERATOR
+        name: Generate N Strings
+        portGroups: []
+        returns:
+        - key: return0
+          kind: STRING
+          nullable: false
+          scope: GLOBAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: generate_n_string
+    - definition:
+        args:
+        - description: The input string
+          key: hello
+          kind: STRING
+          label: hello
+          nullable: false
+          scope: GLOBAL
+        collections: []
+        description: This function appends world to the input string
+        interfaces: []
+        isDev: false
+        isTestFor: []
+        kind: FUNCTION
+        name: Append World
+        portGroups: []
+        returns:
+        - description: '{{hello}} World'
+          key: return0
+          kind: STRING
+          nullable: false
+          scope: GLOBAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: append_world
+    - definition:
+        args:
+        - description: 'The input string
+
+
+            Returns'
+          key: input
+          kind: STRING
+          label: input
+          nullable: false
+          scope: GLOBAL
+        collections: []
+        description: 'This function prints the input string to
+
+          the console'
+        interfaces: []
+        isDev: false
+        isTestFor: []
+        kind: FUNCTION
+        name: Print String
+        portGroups: []
+        returns:
+        - key: return0
+          kind: STRING
+          nullable: false
+          scope: GLOBAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: print_string
+  manifest:
+    author: jhnnsrs
+    entrypoint: app
+    identifier: helloworld
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+- build_id: dc97b75d-e9cd-4ca3-bf52-d3f8c72238f4
+  build_run: 85b47b4e-695c-4135-90ba-f200fcaef0b0
+  description: This is a vanilla flavour
+  flavour: vanilla
+  inspection:
+    requirements:
+      datalayer:
+        description: An instance of ArkitektNext Datalayer to make requests to the
+          user's data
+        optional: true
+        service: live.arkitekt.s3
+      fluss:
+        description: An instance of ArkitektNext fluss to retrieve graphs from
+        optional: false
+        service: live.arkitekt.fluss
+      kabinet:
+        description: An instance of ArkitektNext Kabinet to retrieve nodes from
+        optional: false
+        service: live.arkitekt.kabinet
+      livekit:
+        description: An instance of ArkitektNext Lok to authenticate the user
+        optional: false
+        service: io.livekit.livekit
+      lok:
+        description: An instance of ArkitektNext Lok to authenticate the user
+        optional: false
+        service: live.arkitekt.lok
+      mikro:
+        description: An instance of ArkitektNext Mikro to make requests to the user's
+          data
+        optional: true
+        service: live.arkitekt.mikro
+      rekuest:
+        description: An instance of ArkitektNext Rekuest to assign to nodes
+        optional: false
+        service: live.arkitekt.rekuest
+      unlok:
+        description: An instance of ArkitektNext Lok to authenticate the user
+        optional: false
+        service: live.arkitekt.lok
+    size: 539757131
+    templates:
+    - definition:
+        args:
+        - default: 10
+          description: The number of iterations, by default 10
+          key: n
+          kind: INT
+          label: n
+          nullable: true
+          scope: GLOBAL
+        - default: 2
+          description: The timeout, by default 2
+          key: timeout
+          kind: INT
+          label: timeout
+          nullable: true
+          scope: GLOBAL
+        collections: []
+        description: This function generates {{n}} strings with a {{timeout}} ms timeout
+          between each string
+        interfaces: []
+        isDev: false
+        isTestFor: []
+        kind: GENERATOR
+        name: Generate N Strings
+        portGroups: []
+        returns:
+        - key: return0
+          kind: STRING
+          nullable: false
+          scope: GLOBAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: generate_n_string
+    - definition:
+        args:
+        - description: The input string
+          key: hello
+          kind: STRING
+          label: hello
+          nullable: false
+          scope: GLOBAL
+        collections: []
+        description: This function appends world to the input string
+        interfaces: []
+        isDev: false
+        isTestFor: []
+        kind: FUNCTION
+        name: Append World
+        portGroups: []
+        returns:
+        - description: '{{hello}} World'
+          key: return0
+          kind: STRING
+          nullable: false
+          scope: GLOBAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: append_world
+    - definition:
+        args:
+        - description: 'The input string
+
+
+            Returns'
+          key: input
+          kind: STRING
+          label: input
+          nullable: false
+          scope: GLOBAL
+        collections: []
+        description: 'This function prints the input string to
+
+          the console'
+        interfaces: []
+        isDev: false
+        isTestFor: []
+        kind: FUNCTION
+        name: Print String
+        portGroups: []
+        returns:
+        - key: return0
+          kind: STRING
+          nullable: false
+          scope: GLOBAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: print_string
+  manifest:
+    author: jhnnsrs
+    entrypoint: app
+    identifier: helloworld
+    scopes:
+    - read
+    version: 0.0.2
+  selectors: []
+latest_build_run: 85b47b4e-695c-4135-90ba-f200fcaef0b0

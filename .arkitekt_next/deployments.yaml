@@ -1,0 +1,145 @@
+deployments:
+- build_id: dc97b75d-e9cd-4ca3-bf52-d3f8c72238f4
+  deployed_at: '2024-09-20T13:31:51.325656'
+  deployment_id: 5df4b571-dac9-42df-889f-4d546893529c
+  deployment_run: 0d14f443-f9ad-45c5-839b-518ee47fd587
+  flavour: vanilla
+  image: jhnnsrs/helloworld:0.0.2-vanilla
+  inspection:
+    requirements:
+      datalayer:
+        description: An instance of ArkitektNext Datalayer to make requests to the
+          user's data
+        optional: true
+        service: live.arkitekt.s3
+      fluss:
+        description: An instance of ArkitektNext fluss to retrieve graphs from
+        optional: false
+        service: live.arkitekt.fluss
+      kabinet:
+        description: An instance of ArkitektNext Kabinet to retrieve nodes from
+        optional: false
+        service: live.arkitekt.kabinet
+      livekit:
+        description: An instance of ArkitektNext Lok to authenticate the user
+        optional: false
+        service: io.livekit.livekit
+      lok:
+        description: An instance of ArkitektNext Lok to authenticate the user
+        optional: false
+        service: live.arkitekt.lok
+      mikro:
+        description: An instance of ArkitektNext Mikro to make requests to the user's
+          data
+        optional: true
+        service: live.arkitekt.mikro
+      rekuest:
+        description: An instance of ArkitektNext Rekuest to assign to nodes
+        optional: false
+        service: live.arkitekt.rekuest
+      unlok:
+        description: An instance of ArkitektNext Lok to authenticate the user
+        optional: false
+        service: live.arkitekt.lok
+    size: 539757131
+    templates:
+    - definition:
+        args:
+        - default: 10
+          description: The number of iterations, by default 10
+          key: n
+          kind: INT
+          label: n
+          nullable: true
+          scope: GLOBAL
+        - default: 2
+          description: The timeout, by default 2
+          key: timeout
+          kind: INT
+          label: timeout
+          nullable: true
+          scope: GLOBAL
+        collections: []
+        description: This function generates {{n}} strings with a {{timeout}} ms timeout
+          between each string
+        interfaces: []
+        isDev: false
+        isTestFor: []
+        kind: GENERATOR
+        name: Generate N Strings
+        portGroups: []
+        returns:
+        - key: return0
+          kind: STRING
+          nullable: false
+          scope: GLOBAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: generate_n_string
+    - definition:
+        args:
+        - description: The input string
+          key: hello
+          kind: STRING
+          label: hello
+          nullable: false
+          scope: GLOBAL
+        collections: []
+        description: This function appends world to the input string
+        interfaces: []
+        isDev: false
+        isTestFor: []
+        kind: FUNCTION
+        name: Append World
+        portGroups: []
+        returns:
+        - description: '{{hello}} World'
+          key: return0
+          kind: STRING
+          nullable: false
+          scope: GLOBAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: append_world
+    - definition:
+        args:
+        - description: 'The input string
+
+
+            Returns'
+          key: input
+          kind: STRING
+          label: input
+          nullable: false
+          scope: GLOBAL
+        collections: []
+        description: 'This function prints the input string to
+
+          the console'
+        interfaces: []
+        isDev: false
+        isTestFor: []
+        kind: FUNCTION
+        name: Print String
+        portGroups: []
+        returns:
+        - key: return0
+          kind: STRING
+          nullable: false
+          scope: GLOBAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: print_string
+  manifest:
+    author: jhnnsrs
+    created_at: '2024-09-20T13:31:20.175814'
+    entrypoint: app
+    identifier: helloworld
+    scopes:
+    - read
+    version: 0.0.2
+  selectors: []
+latest_deployment_run: 6b98aacd-a9a4-4dfe-a060-2880db201525

@@ -4,7 +4,7 @@ from typing import Generator
 
 
 @register
-def generate_n_string(n: int = 10, timeout: int = 2) -> Generator[str]:
+def generate_n_string(n: int = 10, timeout: int = 2) -> Generator[str, None, None]:
     """Generate N Strings
 
     This function generates {{n}} strings with a {{timeout}} ms timeout between each string
